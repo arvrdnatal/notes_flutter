@@ -20,7 +20,7 @@ class _NotesPageState extends State<NotesPage> {
             padding: const EdgeInsets.only(
               right: 16,
               left: 16,
-              bottom: 22,
+              bottom: 20,
               top: 10,
             ),
             child: Row(
@@ -31,13 +31,15 @@ class _NotesPageState extends State<NotesPage> {
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
                 Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(14),
-                        color: secondaryColor),
-                    child: const Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Icon(Icons.search, color: primaryColor),
-                    ))
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    color: secondaryColor,
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Icon(Icons.search, color: primaryColor),
+                  ),
+                ),
               ],
             ),
           ),
