@@ -17,7 +17,12 @@ class _NotesPageState extends State<NotesPage> {
         preferredSize: const Size.fromHeight(120),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.only(right: 16, left: 16, bottom: 22, top: 10),
+            padding: const EdgeInsets.only(
+              right: 16,
+              left: 16,
+              bottom: 22,
+              top: 10,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -26,19 +31,17 @@ class _NotesPageState extends State<NotesPage> {
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
-                    color: secondaryColor
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Icon(Icons.search, color: primaryColor),
-                  )
-                )
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(14),
+                        color: secondaryColor),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Icon(Icons.search, color: primaryColor),
+                    ))
               ],
             ),
           ),
-        )
+        ),
       ),
       body: SafeArea(
         child: Center(
@@ -48,7 +51,10 @@ class _NotesPageState extends State<NotesPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset('lib/assets/svgs/new_note.svg', width: 350),
-                Text('Crie sua primeira nota!', style: Theme.of(context).textTheme.headlineSmall)
+                Text(
+                  'Crie sua primeira nota!',
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
               ],
             ),
           ),
@@ -60,9 +66,9 @@ class _NotesPageState extends State<NotesPage> {
         child: FittedBox(
           child: FloatingActionButton(
             shape: const CircleBorder(),
-            backgroundColor: Colors.black,
-            child: const Icon(Icons.add, color: Colors.white),
-            onPressed: () {  },
+            backgroundColor: colorBlack,
+            child: const Icon(Icons.add, color: colorWhite),
+            onPressed: () {},
           ),
         ),
       ),

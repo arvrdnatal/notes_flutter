@@ -8,13 +8,14 @@ ThemeData getMainTheme() {
     useMaterial3: true,
     textTheme: GoogleFonts.poppinsTextTheme().copyWith(
       headlineLarge: const TextStyle(
-        fontWeight: FontWeight.w900
-      )
-    )
+        fontWeight: FontWeight.w900,
+      ),
+    ),
   );
 }
 
 ColorScheme getColorScheme() {
-  return ColorScheme.fromSeed(seedColor: primaryColor)
-      .copyWith(secondary: secondaryColor);
+  return ColorScheme.fromSeed(seedColor: primaryColor).copyWith(
+    secondary: secondaryColor,
+  );
 }
