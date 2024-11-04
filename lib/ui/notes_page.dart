@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:notes_flutter/routes/routes.dart';
 import 'package:notes_flutter/themes/main_colors.dart';
+import 'package:notes_flutter/ui/widgets/custom_app_bar.dart';
 
 class NotesPage extends StatefulWidget {
   const NotesPage({super.key});
@@ -13,36 +16,29 @@ class _NotesPageState extends State<NotesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(120),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.only(
-              right: 16,
-              left: 16,
-              bottom: 20,
-              top: 10,
+      appBar: CustomAppBar(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Notes',
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Notes',
-                  style: Theme.of(context).textTheme.headlineLarge,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                color: secondaryColor,
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Icon(
+                  Icons.search,
+                  color: primaryColor,
+                  size: 28,
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
-                    color: secondaryColor,
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Icon(Icons.search, color: primaryColor),
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
       body: SafeArea(
@@ -70,7 +66,7 @@ class _NotesPageState extends State<NotesPage> {
             shape: const CircleBorder(),
             backgroundColor: colorBlack,
             child: const Icon(Icons.add, color: colorWhite),
-            onPressed: () {},
+            onPressed: () => context.push(RouteManager.newNotePage),
           ),
         ),
       ),
