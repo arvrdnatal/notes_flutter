@@ -32,3 +32,10 @@ Runner/GeneratedPluginRegistrant.*
 !default.mode2v3
 !default.pbxuser
 !default.perspectivev3
+
+/Podfile
+/Podfile.lock
+
+/Runner.xcworkspace
+/Runner.xcodeproj
+/Flutter
