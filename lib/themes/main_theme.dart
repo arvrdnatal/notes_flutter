@@ -7,7 +7,7 @@ ThemeData getMainTheme() {
     colorScheme: getColorScheme(),
     useMaterial3: true,
     textTheme: GoogleFonts.poppinsTextTheme().copyWith(
-      headlineLarge: const TextStyle(
+      headlineLarge: GoogleFonts.poppinsTextTheme().headlineLarge?.copyWith(
         fontWeight: FontWeight.w900,
       ),
     ),
