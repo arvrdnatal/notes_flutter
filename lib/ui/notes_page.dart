@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:notes_flutter/routes/routes.dart';
 import 'package:notes_flutter/themes/main_colors.dart';
-import 'package:notes_flutter/ui/widgets/custom_app_bar.dart';
+import 'package:notes_flutter/ui/widgets/custom_icon_button.dart';
 
 class NotesPage extends StatefulWidget {
   const NotesPage({super.key});
@@ -16,35 +16,24 @@ class _NotesPageState extends State<NotesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Notes',
-              style: Theme.of(context).textTheme.headlineLarge,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(14),
-                color: secondaryColor,
-              ),
-              child: const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Icon(
-                  Icons.search,
-                  color: primaryColor,
-                  size: 28,
-                ),
-              ),
-            ),
-          ],
+      appBar: AppBar(
+        title: Text(
+          'Notes',
+          style: Theme.of(context).textTheme.headlineLarge,
         ),
+        centerTitle: false,
+        actions: [
+          CustomIconButton(
+            iconData: Icons.search,
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 22),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
