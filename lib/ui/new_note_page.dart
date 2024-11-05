@@ -57,6 +57,7 @@ class _NewNotePageState extends State<NewNotePage> {
                     label: Text('Escreva aqui...'),
                     border: OutlineInputBorder(),
                     floatingLabelAlignment: FloatingLabelAlignment.center,
+                    floatingLabelBehavior: FloatingLabelBehavior.always
                   ),
                   textAlignVertical: TextAlignVertical.top,
                   controller: _textEditingController,
